@@ -1,0 +1,8 @@
+%% -*- erlang -*-
+{application, mmseg,
+ [{description, "libmmseg erlang bindings"},
+  {vsn, "0.1"},
+  {modules, []},
+  {registered, []},
+  {env, []},
+  {applications, [kernel, stdlib]}]}.
