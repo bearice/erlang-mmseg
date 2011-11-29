@@ -48,7 +48,7 @@ recv(P,Acc) ->
         {P,{data,<<Pos:16/integer,Data/binary>>=Pkt}} ->
             Len = byte_size(Pkt)-2,
             %io:format("~p,~p,~ts~n",[Pos,Len,Data]),
-            recv(P,[{Pos,Len,Data}|Acc]);
+            recv(P,[{Data,Pos,Len}|Acc]);
         {P,close} ->
             {error,port_closed};
         {'EXIT',P,Reason} ->
